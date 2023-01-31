@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.call').click(function() {
+                $(this).parent().find('.sub1-subUl').slideToggle();
+                $(this).children('.list3_img1').toggleClass('rotate');
+            });
+
+            $('.liTitleBox').click(function() {
+                $(this).parent().find('.hide').slideToggle();
+                $(this).children('img').toggleClass('rotate');
+            });
+
+            $('.suOrange').click(function() {
+                $('.setpop').fadeIn();
+            });
+
+            $('.pop2Btn1').click(function() {
+                $('.setpop').fadeOut();
+            });
+            
+            $('#chk-toggle').click(function(){
+               if($(this).is(':checked') == true){
+                   $('.black').removeClass('show');
+               }else{
+                   $('.black').addClass('show');
+               }
+            });
+            
+        });
+    </script>
+
+    <title>행복한 광어</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="black show"></div>
+        <header>
+           <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" id="chk-toggle" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li class="profile">
+                        <div class="menuImg"></div>
+                        <p>홍길동 과장</p>
+                    </li>
+                    <a href="#">
+                        <li>작업지시현황</li>
+                    </a>
+                    <a href="#">
+                        <li>입/출관리</li>
+                    </a>
+                    <a href="#">
+                        <li>공지사항<span class="menuNum">2</span></li>
+                    </a>
+                    <a href="#">
+                        <li>설정</li>
+                    </a>
+                    <a href="#">
+                        <li>로그아웃</li>
+                    </a>
+                    <a href="#">
+                        <li></li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+            <h1>행복한 광어</h1>
+        </header>
+
+        <div class="wraper">
+            <p class="date">2020년 08월 03일</p>
+            <p class="carNum">경기 65가 1234</p>
+            <!-- 주간팀 화면 -->
+            <ul class="mainList ">
+                <li>
+                    <div class="liTitleBox">
+                        <p class="lititle">납품물량</p>
+                        <img src="images/02_main_07.png" alt="화살표" class="arrow">
+                    </div>
+                    <ul class="mainsubUl">
+                        <li>총 <span>311</span></li>
+                        <li>점포 <span>6</span></li>
+                        <li>물갈이 <span>1</span></li>
+                    </ul>
+
+                    <ul class="subList hide">
+                        <li>
+                            <div>
+                                <p class="subP">광어</p>
+                                <p class="subNum">200(K6)</p>
+                            </div>
+                            <div>
+                                <p class="subP">우럭</p>
+                                <p class="subNum">12</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="subP">참돔</p>
+                                <p class="subNum">19</p>
+                            </div>
+                            <div>
+                                <p class="subP">트레이더스-전복</p>
+                                <p class="subNum">-</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <p class="subP">이마트-전복</p>
+                                <p class="subNum">80</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="liTitleBox">
+                        <p class="lititle">차량수조배치</p>
+                        <img src="images/02_main_07.png" alt="화살표" class="arrow">
+                    </div>
+
+                    <ul class="mainList2 hide">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li>
+                            <p class="botP">전복</p>
+                        </li>
+                        <li>
+                            <p class="topP">우럭 <span>4</span> / 참돔 <span>6</span></p>
+                            <p class="botP">광어 <span>40</span> (꼬리)</p>
+                        </li>
+                        <li>
+                            <p class="topP">참돔 <span>6</span></p>
+                            <p class="botP">광어 <span>60</span> (꼬리)</p>
+                        </li>
+                        <li>
+                            <p class="topP">우럭 <span>4</span> / 참돔 <span>6</span></p>
+                            <p class="botP">광어 <span>130</span> (꼬리)</p>
+                        </li>
+                        <li>
+                            <p class="topP">우럭 <span>7</span></p>
+                            <p class="botP">광어 <span>50</span> (꼬리)</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="liTitleBox ">
+                        <p class="lititle">납품 리스트</p>
+                        <img src="images/02_main_07.png" alt="화살표" class="arrow">
+                    </div>
+
+                    <ul class="liTitle_sub hide">
+                        <li class="skyBlue">
+                            <div class="call" id="sub1-li3">
+                                강릉<img src="images/list3_03.png" class="list3_img1">
+                                <img src="images/sublist2_06.png" class="kistImg1">
+                                <button type="button" class="gray_btn sub1popBtn">작업완료</button>
+                            </div>
+
+                            <ul class="sub1-subUl" id="sub1-li3Ul">
+                                <li class="gray">
+                                    <div>
+                                        <p>꼬리표 k6</p>
+                                        <div class="grayBox">
+                                            <p>30</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="30">
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="gray">
+                                    <div>
+                                        <p>참</p>
+                                        <div class="grayBox">
+                                            <p>130</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="100">
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="sub1-subUl" id="sub1-li3Ul">
+                                <li class="gray">
+                                    <div>
+                                        <p>e전복(대)</p>
+                                        <div class="grayBox">
+                                            <p>30</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="30">
+                                            <button class="suOrange" type="button">업무변경</button>
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="gray">
+                                    <div>
+                                        <p>우</p>
+                                        <div class="grayBox">
+                                            <p>130</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="100">
+                                            <button class="suGray" type="button">지원</button>
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="skyBlue">
+                            <div class="call" id="sub1-li3">
+                                자양<img src="images/list3_03.png" class="list3_img1">
+                                <img src="images/sublist2_10.png" class="kistImg2">
+                                <button type="button" class="gray_btn sub1popBtn">작업완료</button>
+                            </div>
+
+                            <ul class="sub1-subUl" id="sub1-li3Ul">
+                                <li class="gray">
+                                    <div>
+                                        <p>꼬리표 k6</p>
+                                        <div class="grayBox">
+                                            <p>30</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="30">
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="gray">
+                                    <div>
+                                        <p>참</p>
+                                        <div class="grayBox">
+                                            <p>130</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="100">
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="sub1-subUl" id="sub1-li3Ul">
+                                <li class="gray">
+                                    <div>
+                                        <p>e전복(대)</p>
+                                        <div class="grayBox">
+                                            <p>30</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="30">
+                                            <button class="suOrange" type="button">업무변경</button>
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="gray">
+                                    <div>
+                                        <p>우</p>
+                                        <div class="grayBox">
+                                            <p>130</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="100">
+                                            <button class="suGray" type="button">지원</button>
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="skyBlue">
+                            <div class="call" id="sub1-li3">
+                                여의도
+                                <img src="images/list3_03.png" class="list3_img1">
+                                <img src="images/iiiimg_03.png" class="kistImg1">
+                                <button type="button" class="blue_btn sub1popBtn">작업완료</button>
+                            </div>
+
+                            <ul class="sub1-subUl" id="sub1-li3Ul">
+                                <li class="gray">
+                                    <div>
+                                        <p>e전복(대)</p>
+                                        <div class="grayBox">
+                                            <p>130</p>
+                                            <img src="images/rigth_03.png" class="rigth">
+                                            <input type="number" class="num" placeholder="100">
+                                            <p class="ppp">*단가 15,000원 = 450,000원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="gray">
+                                    <div>
+                                        <p class="abPheight">물갈이</p>
+                                        <ul class="main_sub_Gbox">
+                                            <li>
+                                                <p>전복 물갈이 300t</p>
+                                            </li>
+                                            <li>
+                                                <p>전</p>
+                                                <div class="filebox">
+                                                    <input class="upload-name" name="" id="" value="물갈이전.jpg" disabled="disabled"> <label for="ex_filename"></label>
+                                                    <input type="file" id="" name="" class="upload-hidden">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p>후</p>
+                                                <div class="filebox">
+                                                    <input class="upload-name" name="" id="" value="물갈이전.jpg" disabled="disabled"> <label for="ex_filename"></label>
+                                                    <input type="file" id="" name="" class="upload-hidden">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!--<li class="gray">
+                                    <div>
+                                        <p class="abPheight">청소현황</p>
+                                        <ul class="main_sub_Gbox">
+                                            <li>
+                                                <p>전</p>
+                                                <div class="filebox">
+                                                    <input class="upload-name" name="" id="" value="청소 전.jpg" disabled="disabled"> <label for="ex_filename"></label>
+                                                    <input type="file" id="" name="" class="upload-hidden">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <p>후</p>
+                                                <div class="filebox">
+                                                    <input class="upload-name" name="" id="" value="청소전.jpg" disabled="disabled"> <label for="ex_filename"></label>
+                                                    <input type="file" id="" name="" class="upload-hidden">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <input type="text" class="mainPut">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>-->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="liTitleBox">
+                        <p class="lititle">나의 물갈이 일정</p>
+                        <img src="images/02_main_07.png" alt="화살표" class="arrow">
+                    </div>
+                    <!-- <div id="calendar-main" class="card-calendar"></div> -->
+                    <img src="images/cla_03.jpg" class="maincla">
+                </li>
+            </ul>
+
+
+          
+        </div>
+
+        <div class="setpop">
+            <div class="setpopBox">
+                <p class="popP2">업무변경</p>
+                <ul class="mainpopBox">
+                    <li>
+                        <p>지점</p>
+                        <input type="text" name="" id="" class="mainpop">
+                        <button type="button"><img src="images/shpop_03.jpg"></button>
+                    </li>
+                    <li>
+                        <p>전복</p>
+                        <input type="number" name="" id="" class="mainpop2">
+                    </li>
+                </ul>
+                <button type="submit" class="pop_blue_btn pop2Btn1">납품</button>
+                <button type="button" class="pop_gray_btn pop2Btn1">취소</button>
+            </div>
+        </div>
+
+    </div><!-- wrap end -->
+    <button type="button" class="btn3">업무종료</button>
+    <button type="submit" class="btn4">업무종료</button>
+   
+</body></html>

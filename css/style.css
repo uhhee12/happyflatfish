@@ -556,6 +556,8 @@ div.car {
 .mailBox {
     background: #fff;
     width: 85%;
+    max-width: 650px;
+    min-width: 217px;
     height: auto;
     margin: 200px auto;
     padding: 10px 0 0 0;
@@ -1150,7 +1152,7 @@ input.mainPut {
 }
 
 .mainpopBox button {
-    width: 17%;
+    width: 37px;
 }
 
 .mainpopBox button img {
